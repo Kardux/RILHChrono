@@ -1,0 +1,6 @@
+Font(s) :
+- digital-7 (mono) / by Style-7 (http://www.styleseven.com)
+
+Sprites :
+- chronometer.png / by Freepik (https://www.flaticon.com/authors/freepik)
+-
