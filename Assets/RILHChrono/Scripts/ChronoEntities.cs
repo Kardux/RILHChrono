@@ -19,28 +19,53 @@ Partage dans les Memes Conditions 4.0 International.
 namespace RILHChrono
 {
 	using UnityEngine;
+    using System;
 	using System.Collections;
 	using System.Collections.Generic;
 
-	public static class ChronoTools
+    public class Match
 	{
-		#region Fields
-		#endregion Fields
+		public int number;
+		public string location;
+		public string competitionType;
+		public string group;
+		public DateTime date;
+	}
 
-		#region Properties
-		#endregion Properties
+	public class Team
+	{
+		public Color color;
+		public string name;
 
-		#region Public Methods
-		public static string ToChronoFormat(this float value)
+		public List<Player> players;
+		public List<Official> officials;
+	}
+
+	public class Person
+	{
+		public int licenseNumber;
+		public string name;
+	}
+
+	public class Official : Person
+	{
+		public enum Letter
 		{
-			int minutes = Mathf.Clamp(Mathf.FloorToInt(value / 60.0f), 0, 99);
-			int seconds = Mathf.Clamp(Mathf.FloorToInt(value % 60.0f), 0, 59);
-
-			return minutes.ToString("D2") + ":" + seconds.ToString("D2");
+			A, B, C, D, E, F
 		}
-		#endregion Public Methods
 
-		#region Private Methods
-		#endregion Private Methods
+		public Letter letter;
+	}
+
+	public class Player : Person
+	{
+		public enum Status
+		{
+			Goal,
+			Captain,
+			Assistant
+		}
+
+		public int number;
 	}
 }

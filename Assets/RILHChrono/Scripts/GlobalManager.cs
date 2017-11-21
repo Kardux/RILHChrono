@@ -22,25 +22,56 @@ namespace RILHChrono
 	using System.Collections;
 	using System.Collections.Generic;
 
-	public static class ChronoTools
+	public class GlobalManager : MonoBehaviour
 	{
 		#region Fields
+		private Match _match;
+
+		private Team _teamA;
+		private Team _teamB;
+
+		private Person _refereeeA;
+		private Person _refereeeB;
+		private Person _writer;
+		private Person _chrono;
+
 		#endregion Fields
 
 		#region Properties
 		#endregion Properties
 
-		#region Public Methods
-		public static string ToChronoFormat(this float value)
+		#region MonoBehaviour
+		protected void Awake()
 		{
-			int minutes = Mathf.Clamp(Mathf.FloorToInt(value / 60.0f), 0, 99);
-			int seconds = Mathf.Clamp(Mathf.FloorToInt(value % 60.0f), 0, 59);
+			DontDestroyOnLoad(gameObject);
+		}
 
-			return minutes.ToString("D2") + ":" + seconds.ToString("D2");
+		protected void Start ()
+		{
+
+		}
+
+		protected void Update ()
+		{
+
+		}
+		#endregion MonoBehaviour
+
+		#region Public Methods
+		public void AddPlayer(bool isTeamA)
+		{
+			if (isTeamA)
+			{
+				
+			}
+			else
+			{
+
+			}
 		}
 		#endregion Public Methods
 
 		#region Private Methods
 		#endregion Private Methods
-	}
+	}	
 }

@@ -5,15 +5,16 @@ Website: http://roy-bodereau.fr/
 GitHub: https://github.com/Kardux
 LinkedIn: https://fr.linkedin.com/pub/roy-bodereau/b2/94/82b
 ************************************************************************************************************/
-#endregion
+#endregion Author
 
 #region Copyright
 /************************************************************************************************************
 CC-BY-SA 4.0
 http://creativecommons.org/licenses/by-sa/4.0/
-Cette oeuvre est mise a disposition selon les termes de la Licence Creative Commons Attribution 4.0 - Partage dans les Memes Conditions 4.0 International.
+Cette oeuvre est mise a disposition selon les termes de la Licence Creative Commons Attribution 4.0
+Partage dans les Memes Conditions 4.0 International.
 ************************************************************************************************************/
-#endregion
+#endregion Copyright
 
 namespace RILHChrono
 {

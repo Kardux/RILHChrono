@@ -22,7 +22,7 @@ namespace RILHChrono
 	using System.Collections;
 	using System.Collections.Generic;
 
-	public static class ChronoTools
+	public class SetupManager : MonoBehaviour
 	{
 		#region Fields
 		#endregion Fields
@@ -30,14 +30,19 @@ namespace RILHChrono
 		#region Properties
 		#endregion Properties
 
-		#region Public Methods
-		public static string ToChronoFormat(this float value)
+		#region MonoBehaviour
+		protected void Start ()
 		{
-			int minutes = Mathf.Clamp(Mathf.FloorToInt(value / 60.0f), 0, 99);
-			int seconds = Mathf.Clamp(Mathf.FloorToInt(value % 60.0f), 0, 59);
 
-			return minutes.ToString("D2") + ":" + seconds.ToString("D2");
 		}
+
+		protected void Update ()
+		{
+
+		}
+		#endregion MonoBehaviour
+
+		#region Public Methods
 		#endregion Public Methods
 
 		#region Private Methods
